@@ -1,13 +1,17 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "API desenvolvida para ser utilizada no módulo de consumo de API na trilha de React Native do Ignite.",
+  "description": "API desenvolvida para ser utilizada no app Gym Fit",
   "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
     "migrate": "knex migrate:latest",
-    "seed": "knex seed:run"
+    "seed": "knex seed:run",
+    "build": "tsup src"
   },
   "author": "Josan Johnata",
   "license": "ISC",
@@ -25,6 +29,10 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "@types/node": "^20.6.0",
+    "nodemon": "^2.0.19",
+    "tsup": "^7.2.0",
+    "tsx": "^3.12.8",
+    "typescript": "^5.2.2"
   }
 }
